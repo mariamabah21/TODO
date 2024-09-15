@@ -1,0 +1,136 @@
+:root {
+    --dark-blue: #13223D;
+    --white: #FFFFFF;
+    --orange: #ed7a30;
+    --blue: #343AEE;
+    --green: #057e18;
+    --light-gray: #ececec;
+    --dark-gray: #989898;
+
+    --max-width: 900px;
+}
+/* GLOBAL STYLES */ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    max-width: var(--max-width);
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+
+button, input[type=submit] { 
+    background: none;
+    border: none;
+}
+
+
+button:hover, input[type=submit]:hover { 
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+header, footer {
+    position: fixed;
+    left: 50%;
+    max-width: var(--max-width);
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--white);
+
+}
+
+/* HEADER STYLES */ 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+}
+
+header h1 {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+header form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+    
+header form input[type=submit] {
+    background-color: var(--orange);
+    font-weight: 600;
+    padding: 0.8rem 1.4rem;
+    border-radius: 0.3rem;
+    color: var(--white);
+}
+
+header form input[type=text] {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+/* LIST STYLES */ 
+ul {
+    max-height: calc(100vh - 8rem);    
+    overflow: hidden;
+    padding-top: 8.5rem;
+    padding-bottom: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    font-weight: 500;
+    flex-direction: column;
+
+}
+
+ul input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
+    accent-color: var(--green);
+}
+
+ul li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+
+ul li:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+
+.checked {
+    color: var(--dark-gray);
+    text-decoration: line-through;
+}
+
+
+/* FOOTER STYLES */ 
+footer {
+    border-top: 1px solid var(--light-gray);
+    background-color: var(--white);
+    padding: 0.5rem 1rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    align-items: flex-start;
+}
+
+footer button {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
